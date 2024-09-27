@@ -1,0 +1,58 @@
+@import url(https://db.onlinewebfonts.com/c/2bf16335573007d828f4197c2b884c04?family=Satoshi);
+@import url(https://db.onlinewebfonts.com/c/b52804ac57ef6e90d2826a6b0f111133?family=Integral+CF+Bold);
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi";
+}
+
+@layer utilities {
+  .app-container {
+    padding: 0px 20px; /* Default padding */
+  }
+  .sub-font{
+    font-family: "Integral CF Bold";
+  }
+  .admin-font{
+    font-family: "DM Sans";
+  }
+  input[type="checkbox"] {
+    accent-color: black; /* For modern browsers */
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: black; /* For browsers that don't support accent-color */
+    border-color: black; /* Optional: change border color when checked */
+  }
+  
+
+  /* Medium screens (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .app-container {
+      padding: 0px 40px;
+    }
+  }
+
+  /* Large screens (desktops, 1024px and up) */
+  @media (min-width: 1024px) {
+    .app-container {
+      padding: 0px 100px;
+    }
+  }
+  .scroll::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  .marquee {
+    animation: marquee 10s linear infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+}
